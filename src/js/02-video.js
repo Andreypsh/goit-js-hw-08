@@ -18,4 +18,6 @@ player.on('timeupdate', throttle(onPlay, 1000));
 
 const playTime = localStorage.getItem(keys.names);
 console.log(playTime);
-player.setCurrentTime(playTime);
+if (playTime) {
+  player.setCurrentTime(playTime);
+}
